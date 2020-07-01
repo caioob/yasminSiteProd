@@ -1,4 +1,5 @@
-<div class="design bg">
+<div class="home bg">
+  <app-navbar></app-navbar>
       <br>
 
   <app-titulo></app-titulo>
@@ -6,16 +7,60 @@
       <br>
       <br>
 
-  <div class="container">
+  <div class="container" *ngIf="this.id == 1">
     <div class="row">
       <div class="col-md-4 caixa2">
         <div class="cliente2">
-          <p>Varias Fita</p>
+          <p>Heavy House Semana da Mulher</p>
           <i>sobre o projeto</i>
         </div>
       </div>
       <div class="col-md-6">
-        <img class="img-fluid" src="/assets/img/design/heavyHouse/1a.png">
+        <img class="img-fluid" src="/assets/img/design/heavyHouse/{{foto}}a.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 seta"> </div>
+      <div class="col-md-4">
+        <a [routerLink]="['/foto']" [queryParams]="{id: id, foto: fotoAntes}"><h2>&#8592;</h2></a>
+      </div>
+      <div class="col-md-4">
+        <a [routerLink]="['/foto']" [queryParams]="{id: id, foto: fotoDepois}"><h2>&#8594;</h2></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="this.id == 2 && this.horizontal == 1">
+    <div class="row">
+      <div class="col-md-8 caixa3">
+        <div class="cliente2">
+          <p>Moblins</p>
+          <i>sobre o projeto</i>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-10 cliente2">
+        <img class="img-fluid fotoHorziontal" src="/assets/img/design/moblins/foto/{{foto}}a.jpg">
+      </div>
+      <div class="col-md-1 cliente2"></div>
+    </div>
+
+  </div>
+
+<div class="container" *ngIf="this.id == 2 && this.horizontal == 0">
+    <div class="row">
+
+      <div class="col-md-4 caixa2">
+        <div class="cliente2">
+          <p>Heavy House Semana da Mulher</p>
+          <i>sobre o projeto</i>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img class="img-fluid" src="/assets/img/design/moblins/foto/{{foto}}a.jpg">
       </div>
     </div>
   </div>

@@ -11,6 +11,10 @@ body, html {
  padding: 3px;
 }
 
+.seta {
+  padding: 100px;
+}
+
 .caixa {
   border: 1px solid black;
   padding-top: 30px;
@@ -24,6 +28,13 @@ body, html {
   padding: 30px;
   border: 1px solid black;
   margin:1px;
+}
+
+.caixa3 {
+padding: 30px;
+border: 1px solid black;
+margin:30px;
+margin-left: 15px;
 }
 
 .home{
